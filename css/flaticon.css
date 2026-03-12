@@ -386,7 +386,6 @@ About Section
 .premium-title {
   font-size: 44px;
   font-weight: 700;
-
   background: linear-gradient(90deg, #fff, #ffb703);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -395,11 +394,20 @@ About Section
 .premium-subtitle {
   color: #9e9e9e;
   font-size: 18px;
-  max-width: 720px;
+  max-width: 1020px;
   margin: auto;
   margin-top: 15px;
 }
 
+.premium-title{
+font-size:46px;
+font-weight:700;
+color:#ffffff;
+}
+
+.premium-title span{
+color:#ffb703;
+}
 /* CARD */
 
 .premium-card {
@@ -525,6 +533,7 @@ About Section
 
 .premium-card p {
   color: #cfcfcf;
+  max-width:240px;
 }
 
 .premium-card h4 {
