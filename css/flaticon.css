@@ -164,6 +164,101 @@
   }
 }
 
+.hero-name {
+  background: linear-gradient(90deg, #ffb703, #ffd166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+  max-width: 600px;
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-trust {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #aaa !important;
+}
+
+.footer-text {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.heart-icon i {
+  color: #ffb703; /* your theme yellow */
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0px 3px;
+}
+
+/* HOVER EFFECT */
+.footer-text:hover .heart-icon i {
+  color: #ffd60a;
+  transform: scale(1.2) rotate(10deg);
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-icon i {
+  color: #ffb703;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* NAME ANIMATION */
+.name-animate {
+  font-weight: 600;
+  background: linear-gradient(90deg, #ffffff, #ffb703, #ffffff);
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: nameFlow 3s linear infinite;
+}
+
+.name-animate:hover {
+  animation-duration: 1s;
+}
+
+@keyframes nameFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.ftco-footer {
+  padding-bottom: 8px !important;
+}
+
 /*==================================================
 About Section
 ==================================================*/
@@ -548,6 +643,7 @@ About Section
 
 .section-title span {
   color: #ffb703;
+  color: #fbbf24;
 }
 
 .section-title::after {
@@ -569,8 +665,9 @@ About Section
   margin: auto;
   margin-top: 15px;
   color: #a7a7a7;
+  color: #a1a1aa;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .project-card {
@@ -940,6 +1037,160 @@ About Section
 }
 .skill-item:hover .skill-icon {
   transform: rotate(8deg) scale(1.15);
+}
+
+/* ========================= Contact SECTION ========================= */
+
+.contact-section {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.contact-box {
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-6px);
+  background: #161616;
+}
+
+.availability-text {
+  font-size: 14px;
+  color: #71717a;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
+}
+
+.availability-text::before {
+  content: "●";
+  color: #22c55e;
+  margin-right: 8px;
+}
+
+.contact-img {
+  width: 100%;
+  /* max-width: 500px; */
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  max-width: 67.6%;
+  margin-top: 20px;
+}
+
+.contact-section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* FIXED */
+  text-align: left;
+  padding-left: 0; /* REMOVE EXTRA SHIFT */
+}
+
+.contact-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.rocket {
+  font-size: 22px;
+  margin-left: 6px;
+  background: linear-gradient(135deg, #ffffff, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: rocketFloat 2s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.contact-desc {
+  font-size: 14px;
+  color: #d4d4d8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-highlights {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.contact-highlights li {
+  margin-bottom: 8px;
+  color: #e4e4e7;
+  font-size: 15px;
+}
+
+.contact-proof {
+  font-size: 13px;
+  color: #71717a;
+  color: #d4d4d8;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 6px;
+  border-top: 1px solid #1f2937;
+  letter-spacing: 0.3px;
+}
+
+.contact-form-container {
+  background: #111;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modern-form .form-control {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.modern-form .form-control::placeholder {
+  color: #71717a;
+}
+
+.modern-form .form-control:focus {
+  border-color: #fbbf24;
+  box-shadow: none;
+}
+
+.modern-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #000;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 14px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.modern-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
